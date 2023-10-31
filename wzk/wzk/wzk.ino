@@ -49,7 +49,8 @@ void setup() {
   digitalWrite(sensorVCC, LOW);
   pinMode(blueLED, OUTPUT); 
   digitalWrite(blueLED, HIGH);
-
+  //set up the pin for led
+  pinMode(14, OUTPUT); 
   // open serial connection for debug info
   Serial.begin(115200);
   delay(100);
@@ -73,10 +74,18 @@ void loop() {
   // handler for receiving requests to webserver
   server.handleClient();
 
-  if (minuteChanged()) {
+    delay(3000);
     readMoisture();
     sendMQTT();
     Serial.println(GB.dateTime("H:i:s")); // UTC.dateTime("l, d-M-y H:i:s.v T")
+  //when moisture lower than 50, esp8266 will turn the LED on and water the plant(pretending by servo)
+  if(Moisture<50)
+  {
+    digitalWrite(14,HIGH);
+  }
+  else
+    {
+    digitalWrite(14,LOW);
   }
   
   client.loop();
