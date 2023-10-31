@@ -1,30 +1,25 @@
 #include <SoftwareSerial.h>
 
-SoftwareSerial mySerial(13, 12); // RX, TX，接esp的Tx,Rx
+SoftwareSerial mySerial(13, 12); // define softwareserial port
 
-#include "U8glib.h"//U8g2库
-void draw(void);
-//四针iic的引脚定义
-U8GLIB_SSD1306_128X64 u8g(U8G_I2C_OPT_NONE);//SCL-A5；SDA-A4
 
 void setup() {
+  // set the data rate for the hardwareSerial port
   Serial.begin(115200); 
   Serial.println("Hello,serial!");
 
-  // set the data rate for the SoftwareSerial port
+  // set the data rate for the softwareSerial port
   mySerial.begin(115200);
   mySerial.println("AT");
-  u8g.firstPage(); 
 }
 
 void loop() { // run over and over
+  // when arduino receive information from esp8266
   if (mySerial.available()) {
- //   char a =mySerial.read();
- //   Serial.write(a);
- Serial.write(mySerial.read());
-
+ Serial.write(mySerial.read());// then it will send that information to computer
   }
+  // when arduino receive information from computer
   if (Serial.available()) {
-    mySerial.write(Serial.read());
+    mySerial.write(Serial.read());// then it will send that information to esp8266
   }
 }
