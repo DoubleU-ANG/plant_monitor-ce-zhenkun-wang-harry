@@ -1,16 +1,15 @@
-
 #include <Arduino.h>
 #include <Wire.h>
 
 
 void setup()
 {
-    Serial.begin(115200); 
+    Serial.begin(115200); //set up serial and data rate
 }
 
 void loop()
 {                    
-                    Serial.print("delay1");//esp-->单片机
-                    delay(500);
+        Serial.print("delay1");//send text to arduino
+        delay(500);
  
 }
