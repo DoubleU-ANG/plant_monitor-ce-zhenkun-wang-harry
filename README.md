@@ -1,7 +1,7 @@
 # plant_monitor-ce-zhenkun-wang-harry
-This project is a plant monitor system, including a plant monitor used to monitor the state of the plant(temperature, humidity, moisture), a blinking monster to remind whether there is anything approaching, and a rasp-pi which can act as a datastore
+This project is a plant monitor system, including a plant monitor used to monitor the state of the plant(temperature, humidity, moisture) and then upload the data to the MQTT server, a blinking monster to remind whether there is anything approaching, and a rasp-pi which can act as a datastore and then process the data by using some powerful tools.
 ## plant monitor
-It has DHT22, the sensor used to gain the data of plant(temperature, humidity, moisture) and esp8266 to upload the data to the MQTT server
+It has DHT22, the sensor used to gain the data of plant(temperature, humidity, moisture), esp8266 to collect and upload the data to the MQTT server and a light and a servo.
 ![WechatIMG17](https://github.com/DoubleU-ANG/plant_monitor-ce-zhenkun-wang-harry/assets/100694831/6661fec5-6c41-4d19-a25b-038c13d6825c)
 ![upload_data](https://github.com/DoubleU-ANG/plant_monitor-ce-zhenkun-wang-harry/assets/100694831/4856acfd-611e-4a75-b611-499a4dc8d267)
 A servo, used to pretend watering, and a light have also been used to warn and water the plant when the moisture is lower than 50 (which means the plant need water)
@@ -12,7 +12,8 @@ Need water(moisture lower than 50):
 the light turns on:
 ![WechatIMG19](https://github.com/DoubleU-ANG/plant_monitor-ce-zhenkun-wang-harry/assets/100694831/ac116bbd-8261-4d77-98f3-eab70a27971a)
 the servo works to add water:
-https://github.com/DoubleU-ANG/plant_monitor-ce-zhenkun-wang-harry/assets/100694831/864d2f17-206f-4221-ad3c-8a304c3fb188
+https://github.com/DoubleU-ANG/plant_monitor-ce-zhenkun-wang-harry/assets/100694831/50bdfb72-e570-4cdb-a66d-0f2afef10ab1
+
 
 Enough water(moisture higher than 50):
 ![WechatIMG26](https://github.com/DoubleU-ANG/plant_monitor-ce-zhenkun-wang-harry/assets/100694831/d58c2744-9e43-42ad-9e4b-e848c53c73b5)
@@ -36,8 +37,11 @@ grafana visualize data:
 I have failed to reach the data in the MQTT server for many times, and all caused by a same problem -- I did not input the right path, which is really easy to be ignored. So the next time I do the same task, I will check the path firstly to make sure that I have input the right one. 
 
 # Potential function:
-I have set up the communication between arduino uno and esp8266, which can send some text(for example: I sent 'delay1').
+## communication between arduino and esp8266 through IIC
+I have set up the communication between arduino uno and esp8266 through serial port, which can send some text(for example: I sent 'delay1').
 ![WechatIMG16](https://github.com/DoubleU-ANG/plant_monitor-ce-zhenkun-wang-harry/assets/100694831/d67021fd-d9c3-4020-a7ec-64df264a3034)
 ![serial_communication](https://github.com/DoubleU-ANG/plant_monitor-ce-zhenkun-wang-harry/assets/100694831/9ce7886a-47e5-4745-8f8f-caf3df6e8eaa)
-So I think I can send data of plant from esp8266 to arduino and then develop some more interesting interactions based on those data.
+But it is not appropriate to use serial port to communicate in this project because I don't really know which pins are available to be set up as software serial. So it is necessary to build up IIC communication between these two controller. After doing that I can send data of plant from esp8266 to arduino and then develop some more interesting interactions based on those data.
 
+## OLED DISPLAY
+There is no screen to show information on the esp8266 and arduino, so it is necessary to add screen on these controller to let user know what is going on. I have make the screen to display some text on the arduino, in the next step I will combine it into the whole project to display some information including temperature, humidity and moisture.
