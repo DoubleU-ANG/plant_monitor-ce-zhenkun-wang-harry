@@ -1,5 +1,5 @@
 # plant_monitor-ce-zhenkun-wang-harry
-This project is a plant monitor system, including a plant monitor used to monitor the state of the plant(temperature, humidity, moisture), a blinking monster to remind whether there is anything approaching, and a rasp-pi which can read the data from the MQTT server and then upload to some data
+This project is a plant monitor system, including a plant monitor used to monitor the state of the plant(temperature, humidity, moisture), a blinking monster to remind whether there is anything approaching, and a rasp-pi which can act as a datastore
 ## plant monitor
 It has DHT22, the sensor used to gain the data of plant(temperature, humidity, moisture) and esp8266 to upload the data to the MQTT server
 ![WechatIMG17](https://github.com/DoubleU-ANG/plant_monitor-ce-zhenkun-wang-harry/assets/100694831/6661fec5-6c41-4d19-a25b-038c13d6825c)
@@ -25,5 +25,9 @@ When something strange approach the plant, the monster will be blinking(buzzer a
 https://github.com/DoubleU-ANG/plant_monitor-ce-zhenkun-wang-harry/assets/100694831/7b8f6966-9113-405a-b7ea-55882e3780cc
 
 ## rasp-pi:
+It has telegraf to collect the data, influxdb to store the data and granafa to visualize the data. So we can use these three tools to make our data more readable and beautiful.
+
+# Problems that I met:
+I have failed to reach the data in the MQTT server for many times, and all caused by a same problem -- I did not input the right path, which is really easy to be ignored. So the next time I do the same task, I will check the path firstly to make sure that I have input the right one. 
 
 
