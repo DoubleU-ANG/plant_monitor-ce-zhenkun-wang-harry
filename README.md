@@ -29,9 +29,10 @@ https://github.com/DoubleU-ANG/plant_monitor-ce-zhenkun-wang-harry/assets/100694
 It has telegraf to collect the data, influxdb to store the data and granafa to visualize the data. So we can use these three tools to make our data more readable and beautiful.
 
 influxdb get data from telegraf:
-<img width="1244" alt="influxdb" src="https://github.com/DoubleU-ANG/plant_monitor-ce-zhenkun-wang-harry/assets/100694831/363b11d4-c759-410b-a71c-a21b9d63cba6">
+<img width="1244" alt="influxdb1" src="https://github.com/DoubleU-ANG/plant_monitor-ce-zhenkun-wang-harry/assets/100694831/50f81c36-9ede-4b38-9fd5-5dce3d5df410">
 grafana visualize data:
-<img width="1244" alt="granama" src="https://github.com/DoubleU-ANG/plant_monitor-ce-zhenkun-wang-harry/assets/100694831/a394c5c9-dc8b-4484-ad08-0e9059e70e3d">
+<img width="1244" alt="granama1" src="https://github.com/DoubleU-ANG/plant_monitor-ce-zhenkun-wang-harry/assets/100694831/dcb8c5cb-25ac-4138-9e23-f92c94492329">
+
 
 # Problems that I met:
 I have failed to reach the data in the MQTT server for many times, and all caused by a same problem -- I did not input the right path, which is really easy to be ignored. So the next time I do the same task, I will check the path firstly to make sure that I have input the right one. 
