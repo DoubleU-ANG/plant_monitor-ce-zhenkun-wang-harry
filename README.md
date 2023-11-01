@@ -7,14 +7,14 @@ It has DHT22, the sensor used to gain the data of plant(temperature, humidity, m
 A servo, used to pretend watering, and a light have also been used to warn and water the plant when the moisture is lower than 50 (which means the plant need water)
 ![servo](https://github.com/DoubleU-ANG/plant_monitor-ce-zhenkun-wang-harry/assets/100694831/4ca95131-d9d8-491c-a1e7-313afe856c62)
 
-Need water:
+Need water(moisture lower than 50):
 ![WechatIMG25](https://github.com/DoubleU-ANG/plant_monitor-ce-zhenkun-wang-harry/assets/100694831/4f6174ae-f39d-4231-85cb-504043c5a3a8)
 the light turns on:
 ![WechatIMG19](https://github.com/DoubleU-ANG/plant_monitor-ce-zhenkun-wang-harry/assets/100694831/ac116bbd-8261-4d77-98f3-eab70a27971a)
 the servo works to add water:
 https://github.com/DoubleU-ANG/plant_monitor-ce-zhenkun-wang-harry/assets/100694831/864d2f17-206f-4221-ad3c-8a304c3fb188
 
-Enough water:
+Enough water(moisture higher than 50):
 ![WechatIMG26](https://github.com/DoubleU-ANG/plant_monitor-ce-zhenkun-wang-harry/assets/100694831/d58c2744-9e43-42ad-9e4b-e848c53c73b5)
 the light turns off:
 ![WechatIMG20](https://github.com/DoubleU-ANG/plant_monitor-ce-zhenkun-wang-harry/assets/100694831/e30f5dcb-34d0-4021-a636-5f9db830cbd2)
