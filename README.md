@@ -26,9 +26,10 @@ https://github.com/DoubleU-ANG/plant_monitor-ce-zhenkun-wang-harry/assets/100694
 
 ## rasp-pi:
 It has telegraf to collect the data, influxdb to store the data and granafa to visualize the data. So we can use these three tools to make our data more readable and beautiful.
-influxdb:
+
+influxdb get data from telegraf:
 <img width="1244" alt="influxdb" src="https://github.com/DoubleU-ANG/plant_monitor-ce-zhenkun-wang-harry/assets/100694831/363b11d4-c759-410b-a71c-a21b9d63cba6">
-grafana:
+grafana visualize data:
 <img width="1244" alt="granama" src="https://github.com/DoubleU-ANG/plant_monitor-ce-zhenkun-wang-harry/assets/100694831/a394c5c9-dc8b-4484-ad08-0e9059e70e3d">
 
 # Problems that I met:
