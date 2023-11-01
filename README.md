@@ -30,4 +30,9 @@ It has telegraf to collect the data, influxdb to store the data and granafa to v
 # Problems that I met:
 I have failed to reach the data in the MQTT server for many times, and all caused by a same problem -- I did not input the right path, which is really easy to be ignored. So the next time I do the same task, I will check the path firstly to make sure that I have input the right one. 
 
+# Potential function:
+I have set up the communication between arduino uno and esp8266, which can send some text(for example: I sent 'delay1').
+![WechatIMG16](https://github.com/DoubleU-ANG/plant_monitor-ce-zhenkun-wang-harry/assets/100694831/d67021fd-d9c3-4020-a7ec-64df264a3034)
+![serial_communication](https://github.com/DoubleU-ANG/plant_monitor-ce-zhenkun-wang-harry/assets/100694831/9ce7886a-47e5-4745-8f8f-caf3df6e8eaa)
+So I think I can send data of plant from esp8266 to arduino and then develop some more interesting interactions based on those data.
 
