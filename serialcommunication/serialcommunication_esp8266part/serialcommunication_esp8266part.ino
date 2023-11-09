@@ -1,6 +1,6 @@
 #include <Arduino.h>
 #include <SoftwareSerial.h>
-SoftwareSerial mySerial(14,16); 
+SoftwareSerial mySerial(14,16); define software serial port, define pin14 as RX, define pin16 as TX
 
 void setup() {
   // put your setup code here, to run once:
