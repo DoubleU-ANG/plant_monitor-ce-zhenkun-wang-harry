@@ -1,15 +1,26 @@
 #include <Arduino.h>
-#include <Wire.h>
+#include <SoftwareSerial.h>
+SoftwareSerial mySerial(14,16); 
 
-
-void setup()
-{
-    Serial.begin(115200); //set up serial and data rate
+void setup() {
+  // put your setup code here, to run once:
+  mySerial.begin(9600);
+  Serial.begin(9600);
 }
 
-void loop()
-{                    
-        Serial.print("delay1");//send text to arduino
-        delay(500);
- 
+void loop() {
+  // put your main code here, to run repeatedly:
+  mySerial.print("1");  
+  delay(5000); 
+  mySerial.print("2");
+  delay(5000); 
+  mySerial.print("3");
+  delay(5000); 
+  mySerial.print("4");
+  delay(5000); 
+  mySerial.print("5");
+  delay(5000); 
+  mySerial.print("6");  
+  delay(1500);
+
 }
