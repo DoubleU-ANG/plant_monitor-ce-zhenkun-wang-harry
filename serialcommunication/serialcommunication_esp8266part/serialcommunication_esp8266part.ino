@@ -1,6 +1,6 @@
 #include <Arduino.h>
 #include <SoftwareSerial.h>
-SoftwareSerial mySerial(14,16); define software serial port, define pin14 as RX, define pin16 as TX
+SoftwareSerial mySerial(14,16);
 
 void setup() {
   // put your setup code here, to run once:
@@ -10,6 +10,8 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
+  mySerial.print("0");  
+  delay(5000); 
   mySerial.print("1");  
   delay(5000); 
   mySerial.print("2");
