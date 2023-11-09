@@ -1,6 +1,6 @@
 #include <SoftwareSerial.h>
 
-SoftwareSerial mySerial(13, 12); // define softwareserial port
+SoftwareSerial mySerial(13, 12); // define software serial port, define pin13 as RX, define pin12 as TX
 
 
 void setup() {
