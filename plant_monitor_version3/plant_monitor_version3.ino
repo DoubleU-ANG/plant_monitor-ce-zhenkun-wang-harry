@@ -6,6 +6,8 @@
 #include <DHT.h>
 #include <DHT_U.h>
 #include<Servo.h>                  //加载舵机库
+#include <SoftwareSerial.h>
+SoftwareSerial mySerial(14,16);
 Servo myservo;                     //定义一个舵机对象
 int _servo = 16;                   //指定IO16(D5)引脚
 #define DHTTYPE DHT22   // DHT 22  (AM2302), AM2321
@@ -71,6 +73,7 @@ void setup() {
   client.setCallback(callback);
   myservo.attach(_servo);          //设置指定的IO为舵机
   myservo.write(0);                //开机设置舵机角度为0
+  mySerial.begin(9600);
 }
 
 void loop() {
@@ -82,15 +85,17 @@ void loop() {
     sendMQTT();
     Serial.println(GB.dateTime("H:i:s")); // UTC.dateTime("l, d-M-y H:i:s.v T")
   //when moisture lower than 50, esp8266 will turn the LED on and water the plant(pretending by servo)
-  if(Moisture<50)
+  if(Moisture<100)
   {
+      mySerial.print("1");  
     digitalWrite(14,HIGH);
       for(int i=0;i<180;i++)             //控制舵机角0~90°
   {
     myservo.write(i);                
     delay(2);
   }
-  
+
+
   for(int i=180;i<=0;i--)            //控制舵机角90°~0
   {
     myservo.write(i);                
@@ -98,11 +103,32 @@ void loop() {
   }
 
   }
-  else
+  else if(Moisture>250)
+  {
+    mySerial.print("2"); 
+  }
+  else 
     {
     digitalWrite(14,LOW);
   }
-  
+
+if(Temperature<10)
+{
+  mySerial.print("3");
+}
+else if(Temperature>30)
+{
+  mySerial.print("4");
+}
+
+if(Humidity>50)
+{
+  mySerial.print("5");
+}
+else if(Humidity<10)
+{
+  mySerial.print("6");
+}
   client.loop();
 }
 
