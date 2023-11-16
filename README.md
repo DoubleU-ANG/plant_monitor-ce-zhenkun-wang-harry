@@ -31,6 +31,7 @@ It has telegraf to collect the data, influxdb to store the data and granafa to v
 influxdb get data from telegraf:
 <img width="1244" alt="influxdb1" src="https://github.com/DoubleU-ANG/plant_monitor-ce-zhenkun-wang-harry/assets/100694831/50f81c36-9ede-4b38-9fd5-5dce3d5df410">
 grafana visualize data:
+
 <img width="416" alt="image" src="https://github.com/DoubleU-ANG/plant_monitor-ce-zhenkun-wang-harry/assets/100694831/b58ddae7-6cf7-4f58-a682-ca1a379def76">
 
 
