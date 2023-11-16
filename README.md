@@ -53,7 +53,7 @@ There is no screen to show information on the esp8266 and arduino, so it is nece
 
 
 ## LATEST EXTENSION
-In the latest extension, I add a "mouth" to the plant that can make the system more interactive, which use an OLED screen to display some text based on the condition of the environment.
+In the latest extension, I add a "mouth" to the plant that can make the system more interactive, which use an OLED screen to display some text based on the information of the condition of the environment sent by the plant monitor through serial communication. 
 
 <img width="159" alt="image" src="https://github.com/DoubleU-ANG/plant_monitor-ce-zhenkun-wang-harry/assets/100694831/b6c7af6e-79a2-4316-a4d1-98fe62427fe3">
 
