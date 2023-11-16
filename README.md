@@ -46,3 +46,12 @@ But it is not appropriate to use serial port to communicate in this project beca
 
 ## OLED DISPLAY
 There is no screen to show information on the esp8266 and arduino, so it is necessary to add screen on these controller to let user know what is going on. I have make the screen to display some text on the arduino, in the next step I will combine it into the whole project to display some information including temperature, humidity and moisture.
+
+
+## LATEST EXTENSION
+In the latest extension, I add a "mouth" to the plant that can make the system more interactive, which use an OLED screen to display some text based on the condition of the environment.
+<img width="159" alt="image" src="https://github.com/DoubleU-ANG/plant_monitor-ce-zhenkun-wang-harry/assets/100694831/b6c7af6e-79a2-4316-a4d1-98fe62427fe3">
+<img width="173" alt="image" src="https://github.com/DoubleU-ANG/plant_monitor-ce-zhenkun-wang-harry/assets/100694831/590fb0c2-6c28-4581-9a76-31fedbaebc05">
+<img width="173" alt="image" src="https://github.com/DoubleU-ANG/plant_monitor-ce-zhenkun-wang-harry/assets/100694831/0b06262d-fa64-4812-8c17-4e6db460f6bd">
+We can see how it interacts with us by asking for help
+
