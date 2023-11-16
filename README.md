@@ -32,7 +32,9 @@ influxdb get data from telegraf:
 <img width="1244" alt="influxdb1" src="https://github.com/DoubleU-ANG/plant_monitor-ce-zhenkun-wang-harry/assets/100694831/50f81c36-9ede-4b38-9fd5-5dce3d5df410">
 grafana visualize data:
 
-<img width="416" alt="image" src="https://github.com/DoubleU-ANG/plant_monitor-ce-zhenkun-wang-harry/assets/100694831/b58ddae7-6cf7-4f58-a682-ca1a379def76">
+
+![image](https://github.com/DoubleU-ANG/plant_monitor-ce-zhenkun-wang-harry/assets/100694831/4417d047-da5a-4875-b665-e0ca90bae23c)
+
 
 
 
